@@ -2,6 +2,7 @@
 
 pub(crate) mod listener;
 
+#[cfg(not(target_os = "arceos"))]
 cfg_not_wasi! {
     pub(crate) mod socket;
 }

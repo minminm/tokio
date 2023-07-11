@@ -239,6 +239,7 @@ impl TcpStream {
     /// [`tokio::net::TcpStream`]: TcpStream
     /// [`std::net::TcpStream`]: std::net::TcpStream
     /// [`set_nonblocking`]: fn@std::net::TcpStream::set_nonblocking
+    #[cfg(not(target_os = "arceos"))]
     pub fn into_std(self) -> io::Result<std::net::TcpStream> {
         #[cfg(unix)]
         {
@@ -1150,6 +1151,7 @@ impl TcpStream {
         self.io.set_nodelay(nodelay)
     }
 
+    #[cfg(not(target_os = "arceos"))]
     cfg_not_wasi! {
         /// Reads the linger duration for this socket by getting the `SO_LINGER`
         /// option.
