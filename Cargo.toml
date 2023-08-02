@@ -13,4 +13,6 @@ members = [
   "stress-test",
   "tests-build",
   "tests-integration",
+
+  "apps/hello_world",
 ]

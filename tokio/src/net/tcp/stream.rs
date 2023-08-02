@@ -1,6 +1,7 @@
 cfg_not_wasi! {
     use crate::future::poll_fn;
     use crate::net::{to_socket_addrs, ToSocketAddrs};
+    #[cfg(not(target_os = "arceos"))]
     use std::time::Duration;
 }
 
