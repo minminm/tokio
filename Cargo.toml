@@ -21,4 +21,5 @@ members = [
   "apps/echo",
   "apps/echo-udp",
   "apps/print_each_packet",
+  "apps/proxy",
 ]
