@@ -15,4 +15,5 @@ members = [
   "tests-integration",
 
   "apps/hello_world",
+  "apps/chat",
 ]

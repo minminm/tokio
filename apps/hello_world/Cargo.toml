@@ -8,5 +8,5 @@ edition = "2021"
 [dependencies]
 tokio = { path = "../../tokio", features = ["macros", "rt-multi-thread", "io-util", "net"] }
 
-# It's NOT just a comment. But for selection of features
+# It's NOT just a comment. Makefile will get features from it.
 #axstd = { path = "../../../ulib/axstd", features = ["net", "multitask", "math"], optional = true }

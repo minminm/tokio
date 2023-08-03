@@ -245,6 +245,7 @@ impl UdpSocket {
     /// [`tokio::net::UdpSocket`]: UdpSocket
     /// [`std::net::UdpSocket`]: std::net::UdpSocket
     /// [`set_nonblocking`]: fn@std::net::UdpSocket::set_nonblocking
+    #[cfg(not(target_os = "arceos"))]
     pub fn into_std(self) -> io::Result<std::net::UdpSocket> {
         #[cfg(unix)]
         {
@@ -266,7 +267,7 @@ impl UdpSocket {
     }
 
     fn as_socket(&self) -> socket2::SockRef<'_> {
-        socket2::SockRef::from(self)
+        panic!("as_socket");
     }
 
     /// Returns the local address that this socket is bound to.

@@ -36,8 +36,8 @@ cfg_net! {
     pub mod tcp;
     pub use tcp::listener::TcpListener;
     pub use tcp::stream::TcpStream;
-    #[cfg(not(target_os = "arceos"))]
     cfg_not_wasi! {
+        #[cfg(not(target_os = "arceos"))]
         pub use tcp::socket::TcpSocket;
 
         mod udp;
