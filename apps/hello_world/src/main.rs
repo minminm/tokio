@@ -1,11 +1,11 @@
 //! A simple client that opens a TCP stream, writes "hello world\n", and closes
 //! the connection.
 //!
-//! To start a server that this client can talk to on port 6142, you can use this command:
+//! To start a server in another terminal:
 //!
 //!     ncat -l 6142
 //!
-//! And then in another terminal run:
+//! And run this script to start tcp client to connect that server:
 //!
 //!     ./build.arceos
 

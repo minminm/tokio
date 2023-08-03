@@ -11,7 +11,7 @@
 //!
 //! You can test this out by running:
 //!
-//!     make A=apps/tokio/chat STD=y NET=y LOG=info run
+//!     ./build.arceos
 //!
 //! And then in another terminal run:
 //!

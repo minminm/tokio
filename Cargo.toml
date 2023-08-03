@@ -16,4 +16,5 @@ members = [
 
   "apps/hello_world",
   "apps/chat",
+  "apps/connect",
 ]
