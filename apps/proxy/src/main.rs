@@ -7,7 +7,7 @@
 //!
 //! You can showcase this by running this proxy in one terminal:
 //!
-//!     ./build_arceos
+//!     ./build.arceos
 //!
 //! This in another terminal to start a server
 //!
