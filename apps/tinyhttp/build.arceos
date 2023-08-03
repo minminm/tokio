@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ -z "$ARCEOS_ROOT" ]
+then
+    exit -1
+fi
+
+export CARGO_CFG_HTTPARSE_DISABLE_SIMD="1"
+
+echo "Build(out of tree): $PWD; ArceOS root: $ARCEOS_ROOT"
+make -C $ARCEOS_ROOT A=$PWD STD=y NET=y LOG=info run

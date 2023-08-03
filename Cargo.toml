@@ -23,4 +23,5 @@ members = [
   "apps/print_each_packet",
   "apps/proxy",
   "apps/tinydb",
+  "apps/tinyhttp",
 ]
