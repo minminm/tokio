@@ -18,4 +18,5 @@ members = [
   "apps/chat",
   "apps/connect",
   "apps/custom-executor-tokio-context",
+  "apps/echo",
 ]
