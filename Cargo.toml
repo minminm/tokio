@@ -17,4 +17,5 @@ members = [
   "apps/hello_world",
   "apps/chat",
   "apps/connect",
+  "apps/custom-executor-tokio-context",
 ]
