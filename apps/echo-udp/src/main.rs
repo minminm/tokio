@@ -6,7 +6,7 @@
 //!
 //! and in another terminal you can run:
 //!
-//!     cargo run --example connect -- --udp 127.0.0.1:8080
+//!     nc -u 0.0.0.0 5555
 //!
 //! Each line you type in to the `nc` terminal should be echo'd back to you!
 

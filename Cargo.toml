@@ -24,4 +24,5 @@ members = [
   "apps/proxy",
   "apps/tinydb",
   "apps/tinyhttp",
+  "apps/udp-client",
 ]
