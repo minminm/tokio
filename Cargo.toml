@@ -19,6 +19,7 @@ members = [
   "apps/connect",
   "apps/connect-udp",
   "apps/custom-executor-tokio-context",
+  "apps/custom-executor",
   "apps/echo",
   "apps/echo-udp",
   "apps/print_each_packet",
