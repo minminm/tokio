@@ -3,25 +3,21 @@
 //!
 //! For the reasons of simplicity data from `stdio` is read until `EOF` in a blocking manner.
 //!
-//! You can test this out by running an echo server:
+//! You can test this out by running an udp server:
 //!
 //! ```
-//!     $ cargo run --example echo-udp -- 127.0.0.1:8080
+//!     $ nc -u -l 6142
 //! ```
 //!
-//! and running the client in another terminal:
+//! and running this udp client in another terminal:
 //!
 //! ```
-//!     $ cargo run --example udp-client
+//!     $ ./build.arceos
 //! ```
 //!
-//! You can optionally provide any custom endpoint address for the client:
-//!
-//! ```
-//!     $ cargo run --example udp-client -- 127.0.0.1:8080
-//! ```
-//!
-//! Don't forget to pass `EOF` to the standard input of the client!
+//! Don't forget to pass `EOF` (Ctrl+D) to the standard input of the client!
+//! Notice!!! Now we can't input Ctrl+D as `EOF` on qemu.
+//! Don't know the reason!
 //!
 //! Please mind that since the UDP protocol doesn't have any capabilities to detect a broken
 //! connection the server needs to be run first, otherwise the client will block forever.
