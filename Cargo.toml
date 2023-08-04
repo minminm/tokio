@@ -17,6 +17,7 @@ members = [
   "apps/hello_world",
   "apps/chat",
   "apps/connect",
+  "apps/connect-udp",
   "apps/custom-executor-tokio-context",
   "apps/echo",
   "apps/echo-udp",
@@ -25,4 +26,5 @@ members = [
   "apps/tinydb",
   "apps/tinyhttp",
   "apps/udp-client",
+  "apps/udp-codec",
 ]
