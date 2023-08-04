@@ -35,7 +35,7 @@ use std::net::SocketAddr;
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error>> {
     // Parse what address we're going to connect to
-    let addr = "192.168.0.60:6142".to_string();
+    let addr = "127.0.0.1:6142".to_string();
     let addr = addr.parse::<SocketAddr>()?;
 
     let stdin = FramedRead::new(io::stdin(), BytesCodec::new());
