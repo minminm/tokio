@@ -1,0 +1,17 @@
+[package]
+name = "udp-codec"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { path = "../../tokio", features = ["macros", "rt-multi-thread", "io-util", "net"] }
+tokio-stream = { path = "../../tokio-stream", version = "0.1" }
+tokio-util = { path = "../../tokio-util", features = ["full"], version = "0.7.0" }
+futures = { version = "0.3.0", features = ["thread-pool"]}
+bytes = "1.0.0"
+axfeat = { path = "../../../arceos/api/axfeat", optional = true }
+
+# It's NOT just a comment. Makefile will get features from it.
+#axstd = { path = "../../../ulib/axstd", features = ["net", "multitask", "math"], optional = true }

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ -z "$ARCEOS_ROOT" ]
+then
+    exit -1
+fi
+
+echo "Build(out of tree): $PWD; ArceOS root: $ARCEOS_ROOT"
+make -C $ARCEOS_ROOT A=$PWD STD=y NET=y LOG=info FEATURES="ax/sched_cfs" run
