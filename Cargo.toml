@@ -28,4 +28,6 @@ members = [
   "apps/tinyhttp",
   "apps/udp-client",
   "apps/udp-codec",
+
+  "apps/mini-redis/hello",
 ]
