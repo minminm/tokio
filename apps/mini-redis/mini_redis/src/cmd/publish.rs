@@ -1,4 +1,7 @@
+/*
 use crate::{Connection, Db, Frame, Parse};
+*/
+use crate::Frame;
 
 use bytes::Bytes;
 
@@ -27,6 +30,7 @@ impl Publish {
         }
     }
 
+/*
     /// Parse a `Publish` instance from a received frame.
     ///
     /// The `Parse` argument provides a cursor-like API to read fields from the
@@ -85,6 +89,7 @@ impl Publish {
 
         Ok(())
     }
+*/
 
     /// Converts the command into an equivalent `Frame`.
     ///

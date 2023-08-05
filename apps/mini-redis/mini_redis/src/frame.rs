@@ -174,7 +174,6 @@ impl Frame {
         format!("unexpected frame: {}", self).into()
     }
 }
-/*
 
 impl PartialEq<&str> for Frame {
     fn eq(&self, other: &&str) -> bool {
@@ -185,7 +184,6 @@ impl PartialEq<&str> for Frame {
         }
     }
 }
-*/
 
 impl fmt::Display for Frame {
     fn fmt(&self, fmt: &mut fmt::Formatter) -> fmt::Result {

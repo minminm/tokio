@@ -1,11 +1,17 @@
+/*
 use crate::cmd::{Parse, ParseError, Unknown};
 use crate::{Command, Connection, Db, Frame, Shutdown};
+*/
+use crate::Frame;
 
 use bytes::Bytes;
 use std::pin::Pin;
+/*
 use tokio::select;
 use tokio::sync::broadcast;
 use tokio_stream::{Stream, StreamExt, StreamMap};
+*/
+use tokio_stream::Stream;
 
 /// Subscribes the client to one or more channels.
 ///
@@ -38,6 +44,7 @@ impl Subscribe {
         Subscribe { channels }
     }
 
+/*
     /// Parse a `Subscribe` instance from a received frame.
     ///
     /// The `Parse` argument provides a cursor-like API to read fields from the
@@ -152,6 +159,7 @@ impl Subscribe {
             };
         }
     }
+    */
 
     /// Converts the command into an equivalent `Frame`.
     ///
@@ -167,6 +175,7 @@ impl Subscribe {
     }
 }
 
+/*
 async fn subscribe_to_channel(
     channel_name: String,
     subscriptions: &mut StreamMap<String, Messages>,
@@ -347,3 +356,4 @@ impl Unsubscribe {
         frame
     }
 }
+*/

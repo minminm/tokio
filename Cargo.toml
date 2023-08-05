@@ -30,4 +30,6 @@ members = [
   "apps/udp-codec",
 
   "apps/mini-redis/hello",
+  "apps/mini-redis/pub",
+  "apps/mini-redis/sub",
 ]

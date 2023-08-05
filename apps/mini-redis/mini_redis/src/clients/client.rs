@@ -5,7 +5,7 @@
 
 use crate::cmd::{Get, Ping, Publish, Set, Subscribe, Unsubscribe};
 */
-use crate::cmd::{Get, Set};
+use crate::cmd::{Get, Set, Publish, Subscribe};
 use crate::{Connection, Frame};
 
 //use async_stream::try_stream;
@@ -36,7 +36,6 @@ pub struct Client {
     connection: Connection,
 }
 
-/*
 /// A client that has entered pub/sub mode.
 ///
 /// Once clients subscribe to a channel, they may only perform pub/sub related
@@ -56,7 +55,6 @@ pub struct Message {
     pub channel: String,
     pub content: Bytes,
 }
-*/
 
 impl Client {
     /// Establish a connection with the Redis server located at `addr`.
@@ -282,7 +280,6 @@ impl Client {
         }
     }
 
-    /*
     /// Posts `message` to the given `channel`.
     ///
     /// Returns the number of subscribers currently listening on the channel.
@@ -380,7 +377,6 @@ impl Client {
 
         Ok(())
     }
-*/
 
     /// Reads a response frame from the socket.
     ///
@@ -406,7 +402,6 @@ impl Client {
     }
 }
 
-/*
 impl Subscriber {
     /// Returns the set of channels currently subscribed to.
     pub fn get_subscribed(&self) -> &[String] {
@@ -437,6 +432,7 @@ impl Subscriber {
         }
     }
 
+/*
     /// Convert the subscriber into a `Stream` yielding new messages published
     /// on subscribed channels.
     ///
@@ -520,5 +516,5 @@ impl Subscriber {
 
         Ok(())
     }
-}
 */
+}
