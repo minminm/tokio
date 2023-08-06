@@ -10,7 +10,6 @@ pub use set::Set;
 mod subscribe;
 pub use subscribe::{Subscribe, Unsubscribe};
 
-/*
 mod ping;
 pub use ping::Ping;
 
@@ -18,7 +17,6 @@ mod unknown;
 pub use unknown::Unknown;
 
 use crate::{Connection, Db, Frame, Parse, ParseError, Shutdown};
-*/
 
 /// Enumeration of supported Redis commands.
 ///
@@ -26,19 +24,14 @@ use crate::{Connection, Db, Frame, Parse, ParseError, Shutdown};
 #[derive(Debug)]
 pub enum Command {
     Get(Get),
-    /*
     Publish(Publish),
-    */
     Set(Set),
-    /*
     Subscribe(Subscribe),
     Unsubscribe(Unsubscribe),
     Ping(Ping),
     Unknown(Unknown),
-    */
 }
 
-/*
 impl Command {
     /// Parse a command from a received frame.
     ///
@@ -128,4 +121,3 @@ impl Command {
         }
     }
 }
-*/

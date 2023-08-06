@@ -32,4 +32,9 @@ members = [
   "apps/mini-redis/hello",
   "apps/mini-redis/pub",
   "apps/mini-redis/sub",
+  "apps/mini-redis/client",
+  "apps/mini-redis/server",
 ]
+
+[patch.crates-io]
+errno = { path = "third_party/errno" }

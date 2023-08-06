@@ -1,10 +1,7 @@
-/*
 use crate::{Connection, Db, Frame, Parse};
-*/
-use crate::Frame;
 
 use bytes::Bytes;
-//use tracing::{debug, instrument};
+use tracing::{debug, instrument};
 
 /// Get the value of key.
 ///
@@ -25,7 +22,6 @@ impl Get {
         }
     }
 
-/*
     /// Get the key
     pub fn key(&self) -> &str {
         &self.key
@@ -83,7 +79,6 @@ impl Get {
 
         Ok(())
     }
-*/
 
     /// Converts the command into an equivalent `Frame`.
     ///

@@ -1,14 +1,9 @@
-/*
 use crate::cmd::{Parse, ParseError};
 use crate::{Connection, Db, Frame};
-*/
-use crate::Frame;
 
 use bytes::Bytes;
 use std::time::Duration;
-/*
 use tracing::{debug, instrument};
-*/
 
 /// Set `key` to hold the string `value`.
 ///
@@ -62,6 +57,7 @@ impl Set {
     pub fn expire(&self) -> Option<Duration> {
         self.expire
     }
+    */
 
     /// Parse a `Set` instance from a received frame.
     ///
@@ -142,7 +138,6 @@ impl Set {
 
         Ok(())
     }
-    */
 
     /// Converts the command into an equivalent `Frame`.
     ///

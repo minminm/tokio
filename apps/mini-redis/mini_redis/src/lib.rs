@@ -1,4 +1,3 @@
-/*
 //! A minimal (i.e. very incomplete) implementation of a Redis server and
 //! client.
 //!
@@ -26,7 +25,6 @@
 //!   intermediate representation between a "command" and the byte
 //!   representation.
 
-*/
 pub mod clients;
 pub use clients::Client;
 
@@ -41,7 +39,6 @@ pub use connection::Connection;
 pub mod frame;
 pub use frame::Frame;
 
-/*
 mod db;
 use db::Db;
 use db::DbDropGuard;
@@ -53,12 +50,12 @@ pub mod server;
 
 mod shutdown;
 use shutdown::Shutdown;
-*/
 
 /// Default port that a redis server listens on.
 ///
 /// Used if no port is specified.
-pub const DEFAULT_PORT: u16 = 6379;
+//pub const DEFAULT_PORT: u16 = 6379;
+pub const DEFAULT_PORT: u16 = 5555;
 
 /// Error returned by most functions.
 ///
