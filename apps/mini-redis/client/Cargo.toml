@@ -1,0 +1,15 @@
+[package]
+name = "mini-redis-client"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { path = "../../../tokio", features = ["macros", "rt-multi-thread", "io-util", "net"] }
+mini_redis = { path = "../mini_redis" }
+bytes = "1.4.0"
+tracing-subscriber = { version = "0.3.11", features = ["env-filter"] }
+
+# It's NOT just a comment. Makefile will get features from it.
+#axstd = { path = "../../../ulib/axstd", features = ["net", "multitask", "math"], optional = true }

@@ -5,7 +5,7 @@
 
 use crate::cmd::{Get, Ping, Publish, Set, Subscribe, Unsubscribe};
 */
-use crate::cmd::{Get, Set, Publish, Subscribe};
+use crate::cmd::{Ping, Get, Set, Publish, Subscribe};
 use crate::{Connection, Frame};
 
 //use async_stream::try_stream;
@@ -92,8 +92,6 @@ impl Client {
         Ok(Client { connection })
     }
 
-    /*
-
     /// Ping to the server.
     ///
     /// Returns PONG if no argument is provided, otherwise
@@ -128,7 +126,6 @@ impl Client {
             frame => Err(frame.to_error()),
         }
     }
-    */
 
     /// Get the value of key.
     ///

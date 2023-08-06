@@ -66,7 +66,6 @@ impl Ping {
         Ok(())
     }
 
-    /*
     /// Converts the command into an equivalent `Frame`.
     ///
     /// This is called by the client when encoding a `Ping` command to send
@@ -79,5 +78,4 @@ impl Ping {
         }
         frame
     }
-    */
 }
