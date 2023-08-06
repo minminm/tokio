@@ -5,6 +5,13 @@
 //! client messages. These messages are then processed and returned back as a
 //! new message with a new destination. Overall, we then use this to construct a
 //! "ping pong" pair where two sockets are sending messages back and forth.
+//!
+//! Start the server in one terminal
+//! $ ./build.arceos
+//!
+//! Then start client to connect and input messages:
+//! $ nc -u 127.0.0.1 5555
+//!
 
 #![warn(rust_2018_idioms)]
 
@@ -23,13 +30,16 @@ use std::time::Duration;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error>> {
-    let addr = env::args()
+    let a_addr = env::args()
         .nth(1)
-        .unwrap_or_else(|| "10.0.2.15:0".to_string());
+        .unwrap_or_else(|| "10.0.2.15:5555".to_string());
+    let b_addr = env::args()
+        .nth(1)
+        .unwrap_or_else(|| "127.0.0.1:6143".to_string());
 
     // Bind both our sockets and then figure out what ports we got.
-    let a = UdpSocket::bind(&addr).await?;
-    let b = UdpSocket::bind(&addr).await?;
+    let a = UdpSocket::bind(&a_addr).await?;
+    let b = UdpSocket::bind(&b_addr).await?;
 
     let b_addr = b.local_addr()?;
 
