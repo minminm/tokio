@@ -262,7 +262,7 @@ impl TcpListener {
     /// [`tokio::net::TcpListener`]: TcpListener
     /// [`std::net::TcpListener`]: std::net::TcpListener
     /// [`set_nonblocking`]: fn@std::net::TcpListener::set_nonblocking
-    #[cfg(not(target_os = "arceos"))]
+    #[cfg(not(target_os = "ruxos"))]
     pub fn into_std(self) -> io::Result<std::net::TcpListener> {
         #[cfg(unix)]
         {
